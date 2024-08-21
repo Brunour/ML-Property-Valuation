@@ -1,6 +1,5 @@
 # VentaInmueblesCABA
 
-
 Descripción General
 
 ¿Cuál es el propósito del proyecto?
