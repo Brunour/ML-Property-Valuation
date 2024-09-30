@@ -1,72 +1,75 @@
-# VentaInmueblesCABA
+# Real Estate Price Prediction
 
-Descripción General
+## 📌 Project Overview
 
-¿Cuál es el propósito del proyecto?
+This project explores the relationship between the selling prices of properties and the socioeconomic and infrastructure characteristics of different neighborhoods in Buenos Aires. The goal is to determine if sellers are pricing properties fairly based on location and surrounding conditions, and to identify the most influential factors in property pricing.
 
-Este proyecto tiene como objetivo predecir los precios de inmuebles basados en diversas características de las propiedades y la calidad de vida en la zona. El objetivo es proporcionar estimaciones precisas que ayuden a compradores, vendedores o agencias inmobiliarias a tomar decisiones informadas.
+The project was developed as a practice exercise inspired by a course in Python for Data Science, but it can be expanded to use real data from governmental sources in larger-scale applications.
 
+## 🛠️ Technologies Used
 
-Planteamiento del Problema
+- Python: Programming language for all data manipulation and model building.
+- Google Colab: Development environment for running Python code.
+- Pandas: For data manipulation and cleaning.
+- NumPy: To handle numerical operations.
+- Matplotlib & Seaborn: For data visualization and plotting.
+- Scikit-learn: To implement the Linear Regression model.
+- Google Drive: To store and access datasets.
 
-¿Por qué es relevante el proyecto?
+## 🗂️ Data
 
-El mercado inmobiliario es complejo, y los precios fluctúan según muchos factores. Este proyecto utiliza Machine Learning para ayudar a predecir estos precios, considerando tanto las características de los inmuebles como la calidad de vida en diferentes zonas.
+Neighborhood Data: Extracted from the Government of Buenos Aires' website, providing socioeconomic and infrastructure information.
+Property Listings: Simulated data for the properties, with location codes created specifically for this project. The data could easily be replaced with real location codes in future iterations.
+The dataset includes:
 
+Neighborhood codes
+Property characteristics (e.g., size, type)
+Socioeconomic factors (e.g., security, schools, infrastructure)
 
-¿Qué estoy tratando de resolver?
+## 🎯 Project Objectives
 
-La meta es mejorar la precisión en la estimación de precios, integrando información sobre la situación socio-económica de la zona donde se ubica el inmueble y las características del mismo.
+Predict Fair Pricing: Analyze whether property sellers are pricing properties fairly, given the neighborhood and surrounding conditions.
+Identify Key Features: Determine which factors (e.g., security, infrastructure, etc.) have the greatest impact on the price of properties.
+This project aims to help potential buyers and sellers better understand the influence of neighborhood factors on property prices.
 
+## 📊 Visualizations
 
-Pasos del Proyecto
+Bar Charts: To compare property prices across different neighborhoods.
+Distribution Plots: To analyze the distribution of prices.
+Heatmaps: To visualize the correlation between property prices and various neighborhood features (e.g., safety, infrastructure, schools).
 
-  Cargar el Dataset
-  Comenzamos cargando un dataset principal en formato CSV con más de 9000 registros de inmuebles en venta en la zona de CABA (Ciudad Autónoma de Buenos Aires).
-      
-  Entender el Dataset:
-  Exploramos el dataset para comprender el tipo de datos con los que estamos trabajando, revisando el formato de las columnas, estadísticas generales y muestras.
-      
-  Limpieza de Datos:
-  Se realizaron varias tareas de limpieza, como convertir valores nulos, cambiar formatos de columnas y ajustar los datos para su correcto análisis. Por ejemplo, la columna con los     
-  precios de los inmuebles estaba en formato texto (string) y fue convertida a formato numérico (float) para facilitar los cálculos.
-      
-  Filtrar Información Irrelevante:
-  Eliminar algunas columnas que contenían información irrelevante, como descripciones largas de los inmuebles, para centrarnos en las variables más importantes para el análisis.
-      
-  Combinar con Datos Externos:
-  Se integró un nuevo dataset que contenía información de encuestas sobre la calidad de vida en Buenos Aires, incluyendo temas de seguridad e infraestructura. Esto permitió que el 
-  modelo también pudiera considerar la zona en la que se encontraba cada inmueble para calcular el costo-beneficio o la calidad de vida.
-      
-  Transformar y Limpiar los Datos:
-  Continuamos la limpieza de datos, agregando un nuevo dataset con códigos identificatorios de los barrios, ya que la columna de barrios estaba en formato texto, lo que no es adecuado 
-  para el análisis de Machine Learning.
-      
-  Preparación para Machine Learning:
-  Preparé los datos para trabajar con la biblioteca Scikit-learn (sklearn). Creé una nueva variable con los datos listos para entrenar el modelo de Machine Learning.
-      
-  Evaluación del Modelo:
-  Al evaluar los resultados iniciales, el modelo no ajustaba correctamente debido a la falta de datos. Para mejorar la precisión, se agregaron más datos al conjunto, lo que mejoró la 
-  predicción.
+## 🔍 Model & Methodology
 
+The project employs a Linear Regression model to predict property prices based on neighborhood characteristics.
 
-Análisis de Datos
+Key Steps:
+Data Cleaning & Preparation: Using Pandas, I cleaned and transformed the dataset for analysis.
+Model Training: Implemented a Linear Regression model using Scikit-learn.
+Feature Selection: Analyzed the importance of neighborhood features to see which had the most significant impact on pricing.
+Model Evaluation: Evaluated the model performance using common metrics like Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) (Explanation of these metrics below).
 
-¿Qué herramientas y métodos utilicé para el análisis?
+## 📈 Model Performance
 
-El análisis fue realizado utilizando Python y varias librerías, como Scikit-learn para Machine Learning, Pandas para la manipulación de los datos, Matplotlib y Seaborn para las visualizaciones, y Google Colab como entorno de trabajo.
+Evaluation Metrics:
+Mean Absolute Error (MAE): Measures how far off the predictions are, on average. Lower is better.
+Root Mean Squared Error (RMSE): Gives a sense of how much error the model makes in its predictions. A lower RMSE means better accuracy.
+These metrics help determine how well the model is predicting prices compared to actual prices.
 
-Perspectivas e Interpretaciones
+## 👥 Target Audience
 
-¿Qué encontré y por qué es importante?
+This project is designed for:
 
-Los hallazgos muestran que tanto las características del inmueble como la calidad de vida en la zona son factores importantes en la determinación del precio. Esto ayuda a usuarios y empresas a tomar  mejores decisiones en el mercado inmobiliario.
+People interested in Data Science and Machine Learning.
+Those looking to understand how socioeconomic factors influence real estate prices.
+Recruiters who want to assess my skills in data analysis, Python programming, and machine learning.
+Learners who are just starting in Data Science and want to see a practical, beginner-friendly project.
 
+## 🔧 Potential Improvements
 
-¿Dónde encontré mis datos?
+Replace simulated data with real property listings and neighborhood codes from Buenos Aires.
+Use more advanced models (e.g., Random Forests, Gradient Boosting) to improve prediction accuracy.
+Incorporate more features, such as historical price trends and inflation data.
 
-Los datos originales fueron extraídos de un proyecto correspondiente a la formación de Python para Data Science de Alura Latam. Este proyecto fue desarrollado inicialmente en base a datos de la ciudad de Bogotá, pero creí más conveniente convertirlos a datos de la ciudad de Buenos Aires, específicamente de los 49 barrios de la zona de CABA. El dataset de datos_indec fue armado por mi para los fines del proyecto, aunque podría hacerse con información relevada por el gobierno de la ciudad de buenos aires. Los precios de los inmuebles y las características de los barrios no son tampoco 100% reales, pueden ver un departamento en Núñez con 5 habitaciones a USD 100.000 que no es real ni mucho menos. 
+## 📚 Conclusion
 
-Concusiones Finales
-
-El proyecto y el análisis puede ser mejorado mucho mas cambiando variables como el tipo de inmueble, agregando enlaces para ver el inmueble, ampliar la zona de análisis a toda la provincia, hacer un análisis por comuna, agregar visualizaciones como Power Bi y mucho más que voy a ir realizando conforme vaya descubriendo más información y herramientas.
+This project not only demonstrates the process of data cleaning, visualization, and predictive modeling using Python and Machine Learning, but also serves as a practical tool for understanding the relationship between property pricing and neighborhood characteristics. Future iterations could make this tool valuable for buyers, sellers, and real estate agents alike.
